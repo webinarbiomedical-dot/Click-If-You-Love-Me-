@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Letter</title>
-  <style>
-    body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial;
-      background: linear-gradient(135deg, #fff0f5, #ffe6f0);
-      text-align: center;
-      padding: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 500px;
-    }
-
-    h1 { color: #d63384; }
-
-    p { font-size: 18px; color: #444; }
-  </style>
+<title>Game 2</title>
+<style>
+body{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  background:#fff0f5;
+}
+button{padding:10px;border:none;border-radius:10px;margin:5px;}
+</style>
 </head>
 
 <body>
 
-<div class="card">
-  <h1>💌 A Small Letter</h1>
-  <p>
-    I just wanted you to know…<br><br>
-    you matter more than you think 💖<br><br>
-    and yes… I chose you.<br><br>
-    always.
-  </p>
-</div>
+<h2>Quick Game 😏</h2>
+
+<p>Who is more stronger you or me?</p>
+
+<button onclick="next()">Me ❤️</button>
+<button onclick="next()">Me 😏</button>
+
+<br><br>
+
+<p>Will you stay with me forever Amma?</p>
+
+<button onclick="next()">Yes 💖</button>
+<button onclick="next()">Yes 😂</button>
+
+<script>
+function next(){
+  window.location.href="final.html";
+}
+</script>
 
 </body>
 </html>
