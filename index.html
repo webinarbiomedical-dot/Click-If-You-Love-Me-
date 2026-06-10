@@ -1,65 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Unlock</title>
-  <style>
-    body {
-      height: 100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
-    }
-
-    .box {
-      text-align:center;
-    }
-
-    input {
-      padding:10px;
-      border-radius:10px;
-      border:none;
-      margin-top:10px;
-    }
-
-    button {
-      margin-top:10px;
-      padding:10px 20px;
-      border:none;
-      border-radius:20px;
-      background:#ff4d6d;
-      color:white;
-      cursor:pointer;
-    }
-
-    .error {
-      color: red;
-      margin-top:10px;
-    }
-  </style>
+<title>Start</title>
+<style>
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  background:linear-gradient(135deg,#ffe6f0,#fff);
+}
+button,input{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+}
+button{background:#ff4d6d;color:white;margin-top:10px;}
+</style>
 </head>
 
 <body>
 
-<div class="box">
-  <h2>🔐 Enter Secret Code</h2>
-  <input id="code" placeholder="Type code..." />
-  <br>
-  <button onclick="check()">Unlock</button>
-  <div class="error" id="error"></div>
+<div style="text-align:center">
+<h2>💖 Enter your name</h2>
+<input id="name" placeholder="Shel">
+<br>
+<button onclick="go()">Start</button>
 </div>
 
 <script>
-function check() {
-  let code = document.getElementById("code").value;
-
-  if(code === "SHELL") {
-    window.location.href = "game.html";
-  } else {
-    document.getElementById("error").innerText = "Wrong code 💔";
-  }
+function go(){
+  let n=document.getElementById("name").value || "You";
+  localStorage.setItem("name",n);
+  window.location.href="game1.html";
 }
 </script>
 
